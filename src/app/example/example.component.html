@@ -1,0 +1,15 @@
+<div>
+    <label for="search">Search:</label>
+    <input type="text" name="search" id="search" [formControl]="searchControl">
+</div>
+
+<div *ngIf="filteredList$ | async as filteredList; else loader">
+    <label>Result:</label>
+    <div class="result-container">
+        <span *ngFor="let item of filteredList">{{item.id}} - {{item.name}}</span>
+    </div>
+</div>
+
+<ng-template #loader>
+    Loading...
+</ng-template>
