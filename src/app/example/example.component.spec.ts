@@ -6,11 +6,6 @@ describe('ExampleComponent', () => {
   let component: ExampleComponent;
   let fixture: ComponentFixture<ExampleComponent>;
 
-  const testScheduler = new TestScheduler((actual, expected) => {
-    // Se conecta con jasmine
-    expect(actual).toEqual(expected);
-  });
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ExampleComponent ]

@@ -22,7 +22,7 @@ describe('Operators', () => {
 
     beforeEach(() => {
         testScheduler = new TestScheduler((actual, expected) => {
-            // Se conecta con jasmine
+            // We connect to Jasmine
             expect(actual).toEqual(expected);
         });
     })
